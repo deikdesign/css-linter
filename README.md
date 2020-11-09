@@ -2,16 +2,21 @@
 This is a project to build a css linter
 
 ## Built With
-Ruby
-Rspec
-Colorize
-GitFlow
+* Ruby
+* Rspec
+* Colorize
+* GitFlow
 
 ## Description
 This linter detects errors by checking for:
 
-* Spaces after comma.
-* Check empty line in the end of the file.
+* Check for spaces after comma.
+* Check for expected newline after semi-colon
+* Check for empty line in the end of the file
+* Check for unwanted trailing space
+* Check for indentation of2 spaces
+* Check for unexpected white space before comma.
+* Check for zero value who don't need units
 
 
 
