@@ -1,19 +1,21 @@
+# frozen_string_literal: true
+
 class ZeroValues
-    Message = "Zero Values donot need units"
+  Message = 'Zero Values donot need units'
 
-    def analyze(line, index, total,  context)
-        parts = line.split(":")
+  def analyze(line, _index, _total, _context)
+    parts = line.split(':')
 
-        if(parts[1])
-            value = parts[1].strip.tr(";","")
-            
-            if(value.to_i==0)
-                return value.length<=value.to_i.to_s.length
-            else
-                return true
-            end
-        else
-            return true
-        end
+    if parts[1]
+      value = parts[1].strip.tr(';', '')
+
+      if value.to_i.zero?
+        value.length <= value.to_i.to_s.length
+      else
+        true
+      end
+    else
+      true
     end
+  end
 end

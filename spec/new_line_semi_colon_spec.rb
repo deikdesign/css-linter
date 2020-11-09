@@ -1,16 +1,15 @@
-require("rules/new_line_semi_colon.rb")
-require "rspec"
-RSpec.describe NewLineSemiColon, "NewLineSemiColon" do
-    it "should give a negative result for no end of line semi colon" do 
-        negative_result = NewLineSemiColon.new.analyze(";a", 1, 10, "out")
-        expect(negative_result).to eq false
-    end
-   
-    it "should give a positive result for space after comma" do 
-        positive_result = NewLineSemiColon.new.analyze("a;", 1,10, "out")
-        expect(positive_result).to eq true
+# frozen_string_literal: true
 
+require('rules/new_line_semi_colon.rb')
+require 'rspec'
+RSpec.describe NewLineSemiColon, 'NewLineSemiColon' do
+  it 'should give a negative result for no end of line semi colon' do
+    negative_result = NewLineSemiColon.new.analyze(';a', 1, 10, 'out')
+    expect(negative_result).to eq false
+  end
 
-    end
-
+  it 'should give a positive result for space after comma' do
+    positive_result = NewLineSemiColon.new.analyze('a;', 1, 10, 'out')
+    expect(positive_result).to eq true
+  end
 end

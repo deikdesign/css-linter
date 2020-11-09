@@ -1,7 +1,9 @@
-class CommaSpaces
-    Message = "There must be a space after a comma"
+# frozen_string_literal: true
 
-    def analyze(line, index, total,  context)
-        return !(line=~/,[^ ]/)
-    end
+class CommaSpaces
+  Message = 'There must be a space after a comma'
+
+  def analyze(line, _index, _total, _context)
+    line !~ /,[^ ]/
+  end
 end

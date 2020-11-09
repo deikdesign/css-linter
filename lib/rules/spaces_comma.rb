@@ -1,9 +1,11 @@
-class SpacesComma
-    Message = "Commas cannot be preceeded by a space"
+# frozen_string_literal: true
 
-    def analyze(line, index, total,  context)
-        
-        return !!(line=~/[^ ],/) if(line.include? ",")
-        return true
-    end
+class SpacesComma
+  Message = 'Commas cannot be preceeded by a space'
+
+  def analyze(line, _index, _total, _context)
+    return !!(line =~ /[^ ],/) if line.include? ','
+
+    true
+  end
 end

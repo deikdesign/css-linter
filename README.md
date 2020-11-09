@@ -25,11 +25,13 @@ This linter detects errors by checking for:
   * Terminal / Command Prompt.
   * CSS stylesheets to run the linter.
 
+
   ## How to install
 
   1. Copy the repo link: https://github.com/deikdesign/css-linter.git
   2. Run git clone and paste the link
   3. Tu run the file without a problem make sure to install Colorize gem: gem install colorize
+  4. Install gemfile by writing bundle install in terminal
 
   ## How to use
   After installing the colorize gem, run the following command.
