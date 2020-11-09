@@ -1,3 +1,4 @@
+
 require("./lib/rules/comma_spaces.rb")
 require("./lib/rules/empty_line.rb")
 require("./lib/rules/indentation.rb")

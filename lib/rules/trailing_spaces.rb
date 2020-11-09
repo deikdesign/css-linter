@@ -1,6 +1,6 @@
 class TrailingSpaces 
 
-    message = "Line has trailing spaces"
+    Message = "Line has trailing spaces"
     
 
     def analyze(line, index, total,  context)
