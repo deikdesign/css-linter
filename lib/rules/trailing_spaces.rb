@@ -1,13 +1,11 @@
-class TrailingSpaces 
+#!/usr/bin/env ruby
 
-  Message = "Line has trailing spaces"
-  
+class TrailingSpaces
+  Message = 'Line has trailing spaces'.freeze
 
-  def analyze(line, index, total,  context)
-      if(line=~/\s+$/)
-          return false
-      end
-      return true
+  def analyze(line, _index, _total, _context)
+    return false if line =~ /\s+$/
 
+    true
   end
 end

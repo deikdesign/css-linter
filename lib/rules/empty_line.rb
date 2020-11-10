@@ -1,11 +1,13 @@
-class EmptyLine
-  Message = "There must an empty line at the end of file"
+#!/usr/bin/env ruby
 
-  def analyze(line, index, total,  context)
-      if(index==total-1)
-          return line==""
-      else
-          return true
-      end
+class EmptyLine
+  Message = 'There must an empty line at the end of file'.freeze
+
+  def analyze(line, index, total, _context)
+    if index == total - 1
+      line == ''
+    else
+      true
+    end
   end
 end

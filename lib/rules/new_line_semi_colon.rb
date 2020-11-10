@@ -1,8 +1,11 @@
-class NewLineSemiColon
-  Message = "There must be a newline after semi colon"
+#!/usr/bin/env ruby
 
-  def analyze(line, index, total,  context)
-      return (line=~/;$/) if context=="block"
-      return true
+class NewLineSemiColon
+  Message = 'There must be a newline after semi colon'.freeze
+
+  def analyze(line, _index, _total, context)
+    return (line =~ /;$/) if context == 'block'
+
+    true
   end
 end

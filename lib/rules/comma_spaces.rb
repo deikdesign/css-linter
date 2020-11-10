@@ -1,7 +1,9 @@
-class CommaSpaces
-  Message = "There must be a space after a comma"
+#!/usr/bin/env ruby
 
-  def analyze(line, index, total,  context)
-      return (line=~/,[^ ]/)
+class CommaSpaces
+  Message = 'There must be a space after a comma'.freeze
+
+  def analyze(line, _index, _total, _context)
+    (line =~ /,[^ ]/)
   end
 end

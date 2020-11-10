@@ -1,9 +1,11 @@
-class SpacesComma
-  Message = "Commas cannot be preceeded by a space"
+#!/usr/bin/env ruby
 
-  def analyze(line, index, total,  context)
-      
-      return (line=~/[^ ],/) if(line.include? ",")
-      return true
+class SpacesComma
+  Message = 'Commas cannot be preceeded by a space'.freeze
+
+  def analyze(line, _index, _total, _context)
+    return (line =~ /[^ ],/) if line.include? ','
+
+    true
   end
 end
