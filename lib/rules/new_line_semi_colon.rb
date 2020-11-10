@@ -1,11 +1,8 @@
-# frozen_string_literal: true
-
 class NewLineSemiColon
-  Message = 'There must be a newline after semi colon'
+  Message = "There must be a newline after semi colon"
 
-  def analyze(line, _index, _total, context)
-    return !!(line =~ /;$/) if context == 'block'
-
-    true
+  def analyze(line, index, total,  context)
+      return (line=~/;$/) if context=="block"
+      return true
   end
 end

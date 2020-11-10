@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require('rules/empty_line.rb')
 require 'rspec'
 RSpec.describe EmptyLine, 'Empty Line' do

@@ -1,11 +1,13 @@
-# frozen_string_literal: true
+class TrailingSpaces 
 
-class TrailingSpaces
-  Message = 'Line has trailing spaces'
+  Message = "Line has trailing spaces"
+  
 
-  def analyze(line, _index, _total, _context)
-    return false if line =~ /\s+$/
+  def analyze(line, index, total,  context)
+      if(line=~/\s+$/)
+          return false
+      end
+      return true
 
-    true
   end
 end

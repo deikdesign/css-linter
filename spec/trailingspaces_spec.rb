@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require('rules/trailing_spaces.rb')
 require 'rspec'
 RSpec.describe TrailingSpaces, 'Trailing Spaces' do
