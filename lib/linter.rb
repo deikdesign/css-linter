@@ -18,7 +18,6 @@ class Linter
     lines = @csvdata.split("\n")
     block_open = false
     lines.each_with_index do |line, index|
-      block_open = false if line =~ /\}/
       rules.map do |rule|
         result = rule.analyze(line, index, lines.length, block_open ? 'block' : 'outside')
         unless result
@@ -26,6 +25,7 @@ class Linter
           errors[index + 1] << rule.class::MESSAGE
         end
       end
+      block_open = true if line =~ /\{/
     end
     errors
   end

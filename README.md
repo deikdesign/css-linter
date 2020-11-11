@@ -39,7 +39,7 @@ This linter detects errors by checking for:
 
   ## How to use
   After installing the colorize gem, run the following command.
-    ruby bin/main test.css
+  bin/main test.css
 
 ## Good and Bad Code Examples
 # Good Code Example
