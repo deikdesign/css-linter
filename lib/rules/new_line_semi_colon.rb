@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class NewLineSemiColon
   MESSAGE = 'There must be a newline after semi colon'.freeze
 

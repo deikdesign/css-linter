@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class TrailingSpaces
   MESSAGE = 'Line has trailing spaces'.freeze
 

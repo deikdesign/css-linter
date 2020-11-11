@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class CommaSpaces
   MESSAGE = 'There must be a space after a comma'.freeze
 

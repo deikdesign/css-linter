@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class ZeroValues
   MESSAGE = 'Zero Values donot need units'.freeze
 

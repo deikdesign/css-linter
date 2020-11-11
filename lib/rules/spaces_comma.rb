@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class SpacesComma
   MESSAGE = 'Commas cannot be preceeded by a space'.freeze
 

@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class EmptyLine
   MESSAGE = 'There must an empty line at the end of file'.freeze
 

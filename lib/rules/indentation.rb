@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class Indentation
   MESSAGE = 'Line must be indented by two spaces or tabs'.freeze
 
