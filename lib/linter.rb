@@ -26,7 +26,6 @@ class Linter
           errors[index + 1] << rule.class::MESSAGE
         end
       end
-      block_open = true if line =~ /\{/
     end
     errors
   end
