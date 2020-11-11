@@ -1,4 +1,4 @@
-require('./lib/linter')
+require_relative('../lib/linter')
 
 File.open('./bin/test.css', 'r') do |f|
   data = f.read

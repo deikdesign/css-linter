@@ -1,10 +1,10 @@
-require('./lib/rules/comma_spaces.rb')
-require('./lib/rules/empty_line.rb')
-require('./lib/rules/indentation.rb')
-require('./lib/rules/new_line_semi_colon.rb')
-require('./lib/rules/spaces_comma.rb')
-require('./lib/rules/trailing_spaces.rb')
-require('./lib/rules/zero_values.rb')
+require_relative('../lib/rules/comma_spaces.rb')
+require_relative('../lib/rules/empty_line.rb')
+require_relative('../lib/rules/indentation.rb')
+require_relative('../lib/rules/new_line_semi_colon.rb')
+require_relative('../lib/rules/spaces_comma.rb')
+require_relative('../lib/rules/trailing_spaces.rb')
+require_relative('../lib/rules/zero_values.rb')
 
 class Linter
   def initialize(csvdata)
