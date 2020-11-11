@@ -12,7 +12,8 @@ class Linter
   end
 
   def lint
-    rules = [CommaSpaces.new, EmptyLine.new, Indentation.new, NewLineSemiColon.new, SpacesComma.new, TrailingSpaces.new, ZeroValues.new]
+    rules = [CommaSpaces.new, EmptyLine.new, Indentation.new]
+    rules = [NewLineSemiColon.new, SpacesComma.new, TrailingSpaces.new, ZeroValues.new]
     errors = {}
     lines = @csvdata.split("\n")
     block_open = false
@@ -22,7 +23,7 @@ class Linter
         result = rule.analyze(line, index, lines.length, block_open ? 'block' : 'outside')
         unless result
           errors[index + 1] = errors[index + 1] || []
-          errors[index + 1] << rule.class::Message
+          errors[index + 1] << rule.class::MESSAGE
         end
       end
       block_open = true if line =~ /\{/

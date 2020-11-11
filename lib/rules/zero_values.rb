@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 class ZeroValues
-  Message = 'Zero Values donot need units'.freeze
+  MESSAGE = 'Zero Values donot need units'.freeze
 
   def analyze(line, _index, _total, _context)
     parts = line.split(':')
