@@ -1,5 +1,5 @@
 ## Ruby-Capstone-Project - CSS Linter
-This is a project to build a css linter
+This is a project to build a CSS linter
 
 ## Built With
 * Ruby
@@ -18,7 +18,12 @@ This linter detects errors by checking for:
 * Check for unexpected white space before comma.
 * Check for zero value who don't need units
 
+## Screenshots
+#Screenshot of the scanning file
+![screenshot](./lib/assets/test.JPG)
 
+# Screenshot of linter displaying errors
+![screenshot](./lib/assets/screenshot.JPG)
 
 ## Getting Started
 # Prerequisites
@@ -36,6 +41,21 @@ This linter detects errors by checking for:
   ## How to use
   After installing the colorize gem, run the following command.
     ruby bin/main test.css
+
+## Good and Bad Code Examples
+# Good Code Example
+Here is an example of good practice.
+.app {
+ width: 2px;
+ height: 1px;
+ }
+
+# Bad Code Example
+ Here is an example of poorly written code.
+ .divider, .visual{
+     width:0 
+
+ }
 
 
 ## Author
