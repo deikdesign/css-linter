@@ -6,27 +6,31 @@ require_relative('../lib/rules/spaces_comma.rb')
 require_relative('../lib/rules/trailing_spaces.rb')
 require_relative('../lib/rules/zero_values.rb')
 
+# Linter
 class Linter
-  def initialize(csvdata)
-    @csvdata = csvdata
+  RULES = [CommaSpaces.new, EmptyLine.new, Indentation.new,
+           NewLineSemiColon.new, SpacesComma.new, TrailingSpaces.new, ZeroValues.new].freeze
+  def initialize(csv_data)
+    @csv_data = csv_data
+    @lines = @csv_data.split("\n")
   end
 
   def lint
-    rules = [CommaSpaces.new, EmptyLine.new, Indentation.new]
-    rules = [NewLineSemiColon.new, SpacesComma.new, TrailingSpaces.new, ZeroValues.new]
     errors = {}
-    lines = @csvdata.split("\n")
     block_open = false
-    lines.each_with_index do |line, index|
-      rules.map do |rule|
-        result = rule.analyze(line, index, lines.length, block_open ? 'block' : 'outside')
-        unless result
-          errors[index + 1] = errors[index + 1] || []
-          errors[index + 1] << rule.class::MESSAGE
-        end
+    @lines.each_with_index do |line, index|
+      block_open = false if line =~ /\}/
+      RULES.map do |rule|
+        result = rule.analyze(line, index, @lines.length, block_open ? 'block' : 'outside')
+        add_to_errors(errors, index, rule) unless result
       end
       block_open = true if line =~ /\{/
     end
     errors
+  end
+
+  def add_to_errors(errors, index, rule)
+    errors[index + 1] = errors[index + 1] || []
+    errors[index + 1] << rule.class::MESSAGE
   end
 end
